@@ -2,7 +2,7 @@
 export const site = {
   url: process.env.NEXT_PUBLIC_SITE_URL ?? "https://example.com",
   instagram: "", whatsapp: "", email: "", youtube: "", // opcionais: preencha para aparecerem no rodapé
-  videoUrl: "https://drive.google.com/file/d/1ogaW8vNWNkjURUfXeFFiqMUB2qVIPRSV/preview", // Drive: acesso "qualquer pessoa com o link"
+  videoUrl: "https://www.youtube.com/embed/OtHE2cuSISY", // YouTube/Vimeo/Drive (preview). Inicia sozinho (mudo) ao chegar na seção
   formUrl: "https://docs.google.com/forms/d/e/1FAIpQLSccFeTxwoix1rcXljKHu0iqZLtX8dhy4bzmLWOkxs61DAyp3A/viewform?embedded=true",
   pixLabel: "(11)93505-5613", pixCopy: "11935055613",
 };
@@ -52,3 +52,11 @@ export const parceria = {
   formIntro: "Pensando em uma forma de organizar o valor e o recebimentos dessas ofertas, queremos deixar um formulário abaixo para ser preenchido:",
 };
 export const verse = { text: "O generoso prosperará; quem dá alívio aos outros alívio também receberá.", ref: "Provérbios 11.25" };
+export const pix = {
+  title: "Seja nosso parceiro na missão",
+  paragraphs: [
+    "Se você deseja caminhar conosco e contribuir com aquilo que Deus tem feito por meio do nosso ministério, sua parceria será muito bem-vinda.",
+    "Obrigado por fazer parte dessa caminhada conosco.",
+  ],
+  key: "PIX: (11) 93505-5613",
+};

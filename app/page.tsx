@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { site, photos, hero, historia, igreja, parceria, verse } from "@/lib/content";
+import { site, photos, hero, historia, igreja, parceria, verse, pix } from "@/lib/content";
 import Video from "@/components/Video";
 import CopyPix from "@/components/CopyPix";
 const nav = [["Nossa história", "#historia"], ["A igreja", "#igreja"], ["Parceria", "#parceria"], ["Pix", "#pix"]];
@@ -53,7 +53,7 @@ export default function Home() {
         <div className={wrap}>
           <h2 className={h2}>{igreja.title}</h2>
           <p className="mt-5 max-w-3xl font-serif text-2xl leading-snug"><Rich t={igreja.mission} /></p>
-          <Image src={photos.igreja.src} alt={photos.igreja.alt} width={1200} height={1600} loading="lazy" sizes="(min-width:768px) 60vw, 100vw" className="mt-10 max-h-[520px] w-full rounded-sm object-cover object-center" />
+          <Image src={photos.igreja.src} alt={photos.igreja.alt} width={1800} height={1012} loading="lazy" sizes="(min-width:1152px) 1100px, 100vw" className="mt-10 h-auto w-full rounded-sm" />
           <div className="mt-14 grid gap-12 md:grid-cols-2">
             <div><h3 className="font-serif text-2xl">{igreja.historyTitle}</h3><Paras items={igreja.history} className="mt-5" /></div>
             <div><h3 className="font-serif text-2xl">{igreja.nowTitle}</h3><Paras items={igreja.now} className="mt-5" /></div>
@@ -72,9 +72,10 @@ export default function Home() {
       <section id="pix" className="bg-denim py-20 text-paper md:py-28">
         <div className={`${wrap} grid items-center gap-10 md:grid-cols-[auto_1fr]`}>
           <div className="w-fit rounded-sm bg-white p-4"><Image src={photos.pix.src} alt={photos.pix.alt} width={192} height={192} unoptimized style={{ imageRendering: "pixelated" }} /></div>
-          <div><h2 className={h2}>Nossa Chave PIX</h2>
-            <p className="mt-5 text-xl">Telefone: <span className="font-semibold">{site.pixLabel}</span></p>
-            <div className="mt-6"><CopyPix value={site.pixCopy} /></div></div>
+          <div><h2 className={h2}>{pix.title}</h2>
+            <div className="mt-6 max-w-2xl space-y-4 text-lg leading-relaxed">{pix.paragraphs.map(p => <p key={p}>{p}</p>)}</div>
+            <p className="mt-6 text-xl font-semibold">{pix.key}</p>
+            <div className="mt-5"><CopyPix value={site.pixCopy} /></div></div>
         </div>
       </section>
 
